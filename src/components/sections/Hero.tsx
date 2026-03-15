@@ -12,21 +12,21 @@ export const Hero = () => {
         <div className="text-center">
           <FadeIn direction="up">
             <div className="mb-4">
-              <p className="text-lg md:text-xl text-gray-600 font-medium">
-                Hi, I'm <span className="shimmer-text font-bold">Kadir Nuhović</span>
+              <p className="text-lg md:text-xl text-gray-300 font-medium">
+                Hi, I'm <span className="gradient-text font-bold">Kadir Nuhović</span>
               </p>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 mb-6">
-              <span className="shimmer-text">Frontend Developer</span> & Software Engineering Student
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
+              <span className="gradient-text">Frontend Developer</span> & Software Engineering Student
             </h1>
           </FadeIn>
           
           <FadeIn direction="up" delay={0.2}>
             <div className="max-w-6xl mx-auto space-y-8">
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                I'm a web developer focused on building modern and responsive web applications. I work with technologies such as <span className="font-semibold text-gray-900">React</span>, <span className="font-semibold text-gray-900">Next.js</span>, <span className="font-semibold text-gray-900">JavaScript</span>, <span className="font-semibold text-gray-900">TypeScript</span>, <span className="font-semibold text-gray-900">HTML</span>, <span className="font-semibold text-gray-900">CSS</span>, and <span className="font-semibold text-gray-900">Tailwind CSS</span>, and I have experience working with databases and backend integration.
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                I'm a web developer focused on building modern and responsive web applications. I work with technologies such as <span className="font-semibold text-white">React</span>, <span className="font-semibold text-white">Next.js</span>, <span className="font-semibold text-white">JavaScript</span>, <span className="font-semibold text-white">TypeScript</span>, <span className="font-semibold text-white">HTML</span>, <span className="font-semibold text-white">CSS</span>, and <span className="font-semibold text-white">Tailwind CSS</span>, and I have experience working with databases and backend integration.
               </p>
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
                 I enjoy collaborating in teams, building real-world projects, and constantly improving my development skills. My goal is to create clean, efficient, and user-friendly applications while continuously learning new technologies.
               </p>
             </div>
@@ -36,17 +36,17 @@ export const Hero = () => {
             <div className="mt-12">
               {/* Enhanced Tech Stack */}
               <div className="mb-12">
-                <h3 className="text-lg font-semibold text-gray-700 mb-6">Tech Stack</h3>
+                <h3 className="text-lg font-semibold text-gray-300 mb-6">Tech Stack</h3>
                 <div className="flex flex-wrap items-center justify-center gap-4">
                   {[
-                    { name: 'React', color: 'bg-blue-500/10 text-blue-600 border-blue-200' },
-                    { name: 'TypeScript', color: 'bg-blue-600/10 text-blue-700 border-blue-300' },
-                    { name: 'JavaScript', color: 'bg-yellow-500/10 text-yellow-700 border-yellow-300' },
-                    { name: 'HTML', color: 'bg-orange-500/10 text-orange-600 border-orange-200' },
-                    { name: 'CSS', color: 'bg-purple-500/10 text-purple-600 border-purple-200' },
-                    { name: 'Tailwind CSS', color: 'bg-cyan-500/10 text-cyan-600 border-cyan-200' },
-                    { name: 'Next.js', color: 'bg-gray-800/10 text-gray-800 border-gray-300' },
-                    { name: 'Git', color: 'bg-red-500/10 text-red-600 border-red-200' }
+                    { name: 'React', color: 'bg-blue-500/20 text-blue-400 border-blue-500/30' },
+                    { name: 'TypeScript', color: 'bg-blue-600/20 text-blue-400 border-blue-600/30' },
+                    { name: 'JavaScript', color: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30' },
+                    { name: 'HTML', color: 'bg-orange-500/20 text-orange-400 border-orange-500/30' },
+                    { name: 'CSS', color: 'bg-purple-500/20 text-purple-400 border-purple-500/30' },
+                    { name: 'Tailwind CSS', color: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30' },
+                    { name: 'Next.js', color: 'bg-gray-600/20 text-gray-300 border-gray-600/30' },
+                    { name: 'Git', color: 'bg-red-500/20 text-red-400 border-red-500/30' }
                   ].map((tech, index) => (
                     <div 
                       key={tech.name}
@@ -93,7 +93,7 @@ export const Hero = () => {
               
               {/* Enhanced Tech Stack with Progress Bars */}
               <div className="mb-12">
-                <h3 className="text-lg font-semibold text-gray-700 mb-6 text-center">Tech Stack & Proficiency</h3>
+                <h3 className="text-lg font-semibold text-gray-300 mb-6 text-center">Tech Stack & Proficiency</h3>
                 <div className="max-w-6xl mx-auto space-y-6">
                   {[
                     { name: 'React', level: 90, color: 'bg-blue-500' },
@@ -107,10 +107,10 @@ export const Hero = () => {
                   ].map((tech, index) => (
                     <div key={tech.name} className="space-y-2">
                       <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-700">{tech.name}</span>
-                        <span className="text-sm font-semibold text-gray-900">{tech.level}%</span>
+                        <span className="text-sm font-medium text-gray-300">{tech.name}</span>
+                        <span className="text-sm font-semibold text-white">{tech.level}%</span>
                       </div>
-                      <div className="relative w-full h-4 bg-gray-200 rounded-full overflow-hidden">
+                      <div className="relative w-full h-4 bg-gray-700 rounded-full overflow-hidden">
                         <div 
                           className={`h-full ${tech.color} rounded-full transition-all duration-1000 ease-out relative`}
                           style={{ 
@@ -131,7 +131,7 @@ export const Hero = () => {
                     {['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Next.js', 'Git'].map((tech, index) => (
                       <span 
                         key={tech}
-                        className="px-4 py-2 bg-gold/10 text-gold rounded-full text-sm font-medium border border-gold/20 transition-all duration-300 hover:scale-105"
+                        className="px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium border border-blue-500/30 transition-all duration-300 hover:scale-105"
                       >
                         {tech}
                       </span>
@@ -174,8 +174,8 @@ export const Hero = () => {
       </Container>
       
       {/* Background decoration */}
-      <div className="absolute top-0 -z-10 h-full w-full bg-white dark:bg-gray-950">
-        <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(184,161,99,0.1)] opacity-50 blur-[80px]"></div>
+      <div className="absolute top-0 -z-10 h-full w-full bg-slate-900">
+        <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-blue-500/10 opacity-50 blur-[80px]"></div>
       </div>
     </section>
   );

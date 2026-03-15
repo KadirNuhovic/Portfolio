@@ -5,7 +5,7 @@ import { AnimatedText } from '@/components/ui/AnimatedText';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen" style={{ backgroundColor: '#b0afac' }}>
+    <div className="flex flex-col min-h-screen" style={{ backgroundColor: '#0f172a' }}>
       <Navbar />
       <main className="flex-grow pt-20">
         <Hero />

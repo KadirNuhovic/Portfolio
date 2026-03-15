@@ -2,10 +2,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-gold: #b8a163;
-  --color-header-footer: #c7c6c3;
-  --color-main: #b0afac;
-  --color-cards: #c7c6c3;
+  --color-primary: #ffffff;
+  --color-secondary: #94a3b8;
+  --color-background: #0f172a;
+  --color-button: #22c55e;
   
   --animate-shimmer: shimmer 3s infinite linear;
   
@@ -20,8 +20,8 @@
 }
 
 :root {
-  --background: #b0afac;
-  --foreground: #171717;
+  --background: #0f172a;
+  --foreground: #ffffff;
   --font-sans: 'Roboto', sans-serif;
 }
 
@@ -52,6 +52,18 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   animation: shimmer 3s infinite linear;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #8b5cf6,
+    #06b6d4
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @keyframes fillProgress {
