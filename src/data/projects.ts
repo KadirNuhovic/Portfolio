@@ -1,0 +1,58 @@
+import { Project } from '../types/project';
+
+export const projects: Project[] = [
+  {
+    id: '1',
+    title: 'Digital Menu',
+    description: 'A modern digital menu application for restaurants and cafes.',
+    image: '/projects/digital-menu.png',
+    tags: ['React', 'Next.js', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/KadirNuhovic/Digital-Menu',
+    featured: true,
+  },
+  {
+    id: '2',
+    title: 'Fullstack Project',
+    description: 'A comprehensive fullstack application demonstrating end-to-end development.',
+    image: '/projects/fullstack.png',
+    tags: ['Node.js', 'Express', 'MongoDB', 'React'],
+    githubUrl: 'https://github.com/KadirNuhovic/fullstack-project',
+    featured: true,
+  },
+  {
+    id: '3',
+    title: 'React Project',
+    description: 'A specialized project focusing on advanced React patterns and state management.',
+    image: '/projects/react-project.png',
+    tags: ['React', 'JavaScript', 'CSS'],
+    githubUrl: 'https://github.com/KadirNuhovic/react-project',
+    featured: false,
+  },
+  {
+    id: '4',
+    title: 'Portfolio CV',
+    description: 'A personal CV and portfolio project to showcase professional experience.',
+    image: '/projects/cv.png',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    githubUrl: 'https://github.com/KadirNuhovic/cv',
+    featured: false,
+  },
+  {
+    id: '5',
+    title: 'IT Web',
+    description: 'A web application designed for IT-related services and information.',
+    image: '/projects/it-web.png',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    githubUrl: 'https://github.com/KadirNuhovic/It-web',
+    featured: false,
+  },
+  {
+    id: '6',
+    title: 'New Web',
+    description: 'A modern web project implementing latest design trends and technologies.',
+    image: '/projects/new-web.png',
+    tags: ['Next.js', 'React', 'Tailwind'],
+    githubUrl: 'https://github.com/KadirNuhovic/New-Web',
+    featured: false,
+  },
+];
