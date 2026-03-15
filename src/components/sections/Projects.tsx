@@ -21,10 +21,15 @@ export const Projects = () => {
           {projects.map((project) => (
             <FadeIn key={project.id} direction="up">
               <Card className="h-full flex flex-col group">
-                <div className="relative aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden">
+                <div className="relative aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 overflow-hidden">
                   {/* Placeholder for project image */}
                   <div className="absolute inset-0 flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform duration-500">
-                    Project Image
+                    <div className="text-center">
+                      <svg className="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      <p className="text-sm">{project.title}</p>
+                    </div>
                   </div>
                 </div>
                 

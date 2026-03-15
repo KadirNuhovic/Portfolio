@@ -26,22 +26,44 @@ export const About = () => {
           <FadeIn direction="left">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-                Passionate Developer & Problem Solver
+                Frontend Developer & Software Engineering Student
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                I've spent the last few years honing my skills in web development, focusing on creating clean, efficient, and user-friendly interfaces. My journey started with a curiosity for how things work on the web, and it has evolved into a professional career.
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                I'm a web developer focused on building modern and responsive web applications. I work with technologies such as React, Next.js, JavaScript, TypeScript, HTML, CSS, and Tailwind CSS, and I have experience working with databases and backend integration.
               </p>
-              <p className="text-gray-600 dark:text-gray-400">
-                I believe in continuous learning and staying up-to-date with the latest industry trends. When I'm not coding, you can find me exploring new technologies, contributing to open-source, or sharing my knowledge with the community.
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                I enjoy collaborating in teams, building real-world projects, and constantly improving my development skills. My goal is to create clean, efficient, and user-friendly applications while continuously learning new technologies.
               </p>
-              <div className="grid grid-cols-2 gap-4 pt-4">
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-white italic">Location</h4>
-                  <p className="text-gray-600 dark:text-gray-400">City, Country</p>
+              
+              {/* Enhanced Info Grid */}
+              <div className="grid grid-cols-2 gap-6 pt-6">
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🎓 Education</h4>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">Software Engineering</p>
                 </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-white italic">Experience</h4>
-                  <p className="text-gray-600 dark:text-gray-400">2+ Years</p>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">💼 Experience</h4>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">2+ Years Development</p>
+                </div>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🌍 Location</h4>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">Available Remote</p>
+                </div>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🚀 Status</h4>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">Open to Opportunities</p>
+                </div>
+              </div>
+              
+              {/* Skills Preview */}
+              <div className="pt-6">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Core Skills</h4>
+                <div className="flex flex-wrap gap-2">
+                  {['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'JavaScript'].map((skill) => (
+                    <span key={skill} className="px-3 py-1 bg-gold/10 text-gold rounded-full text-sm font-medium">
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
