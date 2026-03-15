@@ -15,10 +15,11 @@ export const About = () => {
           <FadeIn direction="right">
             <div className="relative aspect-square max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-blue-600/20 mix-blend-multiply"></div>
-              <div className="bg-gray-200 dark:bg-gray-800 w-full h-full flex items-center justify-center text-gray-400">
-                {/* Replace with your image */}
-                <span className="text-sm">Your Photo Here</span>
-              </div>
+              <img 
+                src="/images/profile/profile-photo.jpg" 
+                alt="Kadir Nuhovic - Profile Photo"
+                className="w-full h-full object-cover object-[25%_0%]"
+              />
             </div>
           </FadeIn>
 
