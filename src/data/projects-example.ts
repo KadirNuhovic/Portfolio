@@ -1,6 +1,17 @@
 // Ažurirani data fajl sa slikama
 
-export const projects: Project[] = [
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  liveUrl: string;
+  githubUrl: string;
+  featured: boolean;
+}
+
+export const projectsExample: Project[] = [
   {
     id: 1,
     title: "Digital Menu",

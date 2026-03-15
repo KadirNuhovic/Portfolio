@@ -69,8 +69,7 @@ export const Hero = () => {
                       playsInline
                       className="w-full h-auto max-h-96 object-cover"
                     >
-                      <source src="/videos/hero-video.mp4" type="video/mp4" />
-                      <source src="/videos/hero-video.webm" type="video/webm" />
+                      <source src="/videos/video11.mp4" type="video/mp4" />
                       {/* Fallback image */}
                       <div className="w-full h-96 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
                         <div className="text-center text-white">
@@ -83,10 +82,59 @@ export const Hero = () => {
                       </div>
                     </video>
                     
-                    {/* Optional: Video overlay text */}
+                    {/* Video overlay text */}
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
-                      <p className="text-white text-sm font-medium">Watch me code in action</p>
+                      <p className="text-white text-sm font-medium">🎬 Watch me code in action</p>
                     </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Enhanced Tech Stack with Progress Bars */}
+              <div className="mb-12">
+                <h3 className="text-lg font-semibold text-gray-700 mb-6 text-center">Tech Stack & Proficiency</h3>
+                <div className="max-w-4xl mx-auto space-y-6">
+                  {[
+                    { name: 'React', level: 90, color: 'bg-blue-500' },
+                    { name: 'TypeScript', level: 85, color: 'bg-blue-600' },
+                    { name: 'JavaScript', level: 95, color: 'bg-yellow-500' },
+                    { name: 'HTML/CSS', level: 90, color: 'bg-orange-500' },
+                    { name: 'Tailwind CSS', level: 88, color: 'bg-cyan-500' },
+                    { name: 'Next.js', level: 82, color: 'bg-gray-800' },
+                    { name: 'Git', level: 80, color: 'bg-red-500' },
+                    { name: 'Node.js', level: 75, color: 'bg-green-600' }
+                  ].map((tech, index) => (
+                    <div key={tech.name} className="space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-medium text-gray-700">{tech.name}</span>
+                        <span className="text-sm font-semibold text-gray-900">{tech.level}%</span>
+                      </div>
+                      <div className="relative w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+                        <div 
+                          className={`h-full ${tech.color} rounded-full transition-all duration-1000 ease-out relative`}
+                          style={{ 
+                            width: `${tech.level}%`,
+                            animation: `fillProgress 1s ease-out ${index * 0.1}s forwards`
+                          }}
+                        >
+                          <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Tech Stack Badges */}
+                <div className="mt-8">
+                  <div className="flex flex-wrap items-center justify-center gap-3">
+                    {['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Next.js', 'Git'].map((tech, index) => (
+                      <span 
+                        key={tech}
+                        className="px-3 py-1 bg-gold/10 text-gold rounded-full text-xs font-medium border border-gold/20 transition-all duration-300 hover:scale-105"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
