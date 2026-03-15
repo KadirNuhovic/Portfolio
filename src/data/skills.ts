@@ -1,7 +1,7 @@
 import { Skill } from '../types/skill';
 import { 
   SiHtml5, 
-  SiCss3 as SiCss, 
+  SiCss, 
   SiJavascript, 
   SiTypescript, 
   SiReact, 
