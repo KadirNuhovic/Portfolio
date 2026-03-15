@@ -22,7 +22,7 @@ export const Hero = () => {
           </FadeIn>
           
           <FadeIn direction="up" delay={0.2}>
-            <div className="max-w-4xl mx-auto space-y-6">
+            <div className="max-w-6xl mx-auto space-y-8">
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 I'm a web developer focused on building modern and responsive web applications. I work with technologies such as <span className="font-semibold text-gray-900">React</span>, <span className="font-semibold text-gray-900">Next.js</span>, <span className="font-semibold text-gray-900">JavaScript</span>, <span className="font-semibold text-gray-900">TypeScript</span>, <span className="font-semibold text-gray-900">HTML</span>, <span className="font-semibold text-gray-900">CSS</span>, and <span className="font-semibold text-gray-900">Tailwind CSS</span>, and I have experience working with databases and backend integration.
               </p>
@@ -60,31 +60,32 @@ export const Hero = () => {
               
               {/* Video Section */}
               <div className="mb-12">
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-6xl mx-auto">
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
                     <video 
                       autoPlay 
                       loop 
                       muted 
                       playsInline
-                      className="w-full h-auto max-h-96 object-cover"
+                      className="w-full h-auto max-h-[500px] object-cover"
                     >
                       <source src="/videos/video11.mp4" type="video/mp4" />
                       {/* Fallback image */}
-                      <div className="w-full h-96 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                      <div className="w-full h-[500px] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
                         <div className="text-center text-white">
-                          <svg className="w-16 h-16 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-20 h-20 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
-                          <p className="text-sm opacity-75">Video Loading...</p>
+                          <p className="text-lg opacity-75">Video Loading...</p>
                         </div>
                       </div>
                     </video>
                     
                     {/* Video overlay text */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
-                      <p className="text-white text-sm font-medium">🎬 Watch me code in action</p>
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
+                      <p className="text-white text-lg font-medium">🎬 Watch me code in action</p>
+                      <p className="text-white/80 text-sm mt-2">See how I build modern web applications</p>
                     </div>
                   </div>
                 </div>
@@ -93,7 +94,7 @@ export const Hero = () => {
               {/* Enhanced Tech Stack with Progress Bars */}
               <div className="mb-12">
                 <h3 className="text-lg font-semibold text-gray-700 mb-6 text-center">Tech Stack & Proficiency</h3>
-                <div className="max-w-4xl mx-auto space-y-6">
+                <div className="max-w-6xl mx-auto space-y-6">
                   {[
                     { name: 'React', level: 90, color: 'bg-blue-500' },
                     { name: 'TypeScript', level: 85, color: 'bg-blue-600' },
@@ -109,7 +110,7 @@ export const Hero = () => {
                         <span className="text-sm font-medium text-gray-700">{tech.name}</span>
                         <span className="text-sm font-semibold text-gray-900">{tech.level}%</span>
                       </div>
-                      <div className="relative w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+                      <div className="relative w-full h-4 bg-gray-200 rounded-full overflow-hidden">
                         <div 
                           className={`h-full ${tech.color} rounded-full transition-all duration-1000 ease-out relative`}
                           style={{ 
@@ -130,7 +131,7 @@ export const Hero = () => {
                     {['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Next.js', 'Git'].map((tech, index) => (
                       <span 
                         key={tech}
-                        className="px-3 py-1 bg-gold/10 text-gold rounded-full text-xs font-medium border border-gold/20 transition-all duration-300 hover:scale-105"
+                        className="px-4 py-2 bg-gold/10 text-gold rounded-full text-sm font-medium border border-gold/20 transition-all duration-300 hover:scale-105"
                       >
                         {tech}
                       </span>
