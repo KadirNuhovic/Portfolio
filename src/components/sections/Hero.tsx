@@ -4,10 +4,12 @@ import { Container } from '../layout/Container';
 import { Button } from '../ui/Button';
 import { FadeIn } from '../animations/FadeIn';
 import { AnimatedText } from '../ui/AnimatedText';
+import { smoothScroll } from '@/lib/utils';
+import Link from 'next/link';
 
 export const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+    <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       <Container>
         <div className="text-center">
           <FadeIn direction="up">
@@ -142,31 +144,33 @@ export const Hero = () => {
               
               {/* Enhanced Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <Button 
-                  size="lg" 
-                  className="px-8 py-4 text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 btn-gradient text-white border-0"
-                  onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  <span className="flex items-center gap-2">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                    View My Work
-                  </span>
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="px-8 py-4 text-lg border-2 border-blue-500/50 text-blue-400 hover:border-blue-400 hover:text-blue-300 hover:scale-105 transition-all duration-300"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  <span className="flex items-center gap-2">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    Contact Me
-                  </span>
-                </Button>
+                <Link href="/projects">
+                  <Button 
+                    size="lg" 
+                    className="px-8 py-4 text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 btn-gradient text-white border-0"
+                  >
+                    <span className="flex items-center gap-2">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                      </svg>
+                      View My Work
+                    </span>
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="px-8 py-4 text-lg border-2 border-blue-500/50 text-blue-400 hover:border-blue-400 hover:text-blue-300 hover:scale-105 transition-all duration-300"
+                  >
+                    <span className="flex items-center gap-2">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      Contact Me
+                    </span>
+                  </Button>
+                </Link>
               </div>
             </div>
           </FadeIn>

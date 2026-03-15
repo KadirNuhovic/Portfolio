@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { HiMenu, HiX } from 'react-icons/hi';
-import { NAV_LINKS } from '@/lib/constants';
-import { cn } from '@/lib/utils';
 import { Container } from './Container';
 import { Button } from '../ui/Button';
+import { NAV_LINKS } from '@/lib/constants';
+import { handleNavigation, smoothScroll } from '@/lib/utils';
+import { HiMenu, HiX } from 'react-icons/hi';
+import { cn } from '@/lib/utils';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +48,6 @@ export const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Button size="sm" className="btn-gradient text-white border-0">Resume</Button>
           </div>
 
         {/* Mobile Menu Button */}
@@ -73,7 +73,6 @@ export const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
-              <Button className="w-full btn-gradient text-white border-0">Resume</Button>
             </Container>
           </div>
         )}

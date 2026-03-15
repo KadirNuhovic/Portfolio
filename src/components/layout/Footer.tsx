@@ -1,7 +1,10 @@
+'use client';
+
 import Link from 'next/link';
 import { Container } from './Container';
 import { SOCIAL_LINKS } from '@/lib/constants';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { smoothScroll } from '@/lib/utils';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +14,7 @@ export const Footer = () => {
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
-            <Link href="/" className="text-xl font-bold gradient-text">
+            <Link href="/" className="text-xl font-bold gradient-text hover:scale-105 transition-transform">
               Portfolio
             </Link>
             <p className="mt-2 text-gray-300 max-w-xs">
