@@ -13,15 +13,15 @@ import { HiExternalLink } from 'react-icons/hi';
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 fixed-teget">
       <Container>
         <SectionTitle title="Featured Projects" subtitle="A collection of some of my recent work." />
         
         <Stagger className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <FadeIn key={project.id} direction="up">
-              <Card className="h-full flex flex-col group">
-                <div className="relative aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 overflow-hidden">
+              <Card className="h-full flex flex-col group bg-slate-800/50 border border-blue-500/20">
+                <div className="relative aspect-video bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden">
                   {/* Placeholder for project image */}
                   <div className="absolute inset-0 flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform duration-500">
                     <div className="text-center">
@@ -34,35 +34,35 @@ export const Projects = () => {
                 </div>
                 
                 <CardHeader>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-white text-glow group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
                 </CardHeader>
                 
                 <CardContent className="flex-grow">
-                  <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  <p className="text-gray-300 mb-6">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="outline">{tag}</Badge>
+                      <Badge key={tag} className="bg-blue-500/20 text-blue-400 border-blue-500/30">
+                        {tag}
+                      </Badge>
                     ))}
                   </div>
                 </CardContent>
                 
-                <CardFooter className="gap-4">
+                <CardFooter className="flex gap-4 pt-4">
                   {project.githubUrl && (
-                    <Button variant="ghost" size="sm" className="p-0">
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2">
-                        <SiGithub size={18} /> Code
-                      </a>
+                    <Button variant="outline" size="sm" className="border-blue-500/50 text-blue-400 hover:border-blue-400 hover:text-blue-300">
+                      <SiGithub className="w-4 h-4 mr-2" />
+                      Code
                     </Button>
                   )}
                   {project.liveUrl && (
-                    <Button variant="ghost" size="sm" className="p-0">
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2">
-                        <HiExternalLink size={18} /> Live Demo
-                      </a>
+                    <Button size="sm" className="btn-gradient text-white border-0">
+                      <HiExternalLink className="w-4 h-4 mr-2" />
+                      Live Demo
                     </Button>
                   )}
                 </CardFooter>

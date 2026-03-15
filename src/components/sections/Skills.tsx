@@ -12,14 +12,14 @@ export const Skills = () => {
   const categories = Array.from(new Set(skills.map(s => s.category)));
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900/50">
+    <section id="skills" className="py-20 fixed-teget">
       <Container>
         <SectionTitle title="My Skills" subtitle="The technologies and tools I use to bring ideas to life." />
         
         <div className="space-y-12">
           {categories.map((category) => (
             <div key={category} className="space-y-6">
-              <h3 className="text-xl font-semibold capitalize text-gray-900 dark:text-white border-l-4 border-gold pl-4">
+              <h3 className="text-xl font-semibold capitalize text-white text-glow border-l-4 border-blue-500 pl-4">
                 {category === 'frontend' ? '🎨 Frontend Development' : category === 'backend' ? '⚙️ Backend' : '🔧 Tools'}
               </h3>
               
@@ -30,9 +30,9 @@ export const Skills = () => {
                     const Icon = (SiIcons as any)[skill.icon];
                     return (
                       <FadeIn key={skill.name}>
-                        <Card className="p-4 flex flex-col items-center justify-center gap-3 group hover:border-gold transition-all duration-300 hover:shadow-gold/20 hover:scale-105">
-                          {Icon && <Icon className="w-8 h-8 text-gray-600 group-hover:text-gold transition-colors" />}
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <Card className="p-4 flex flex-col items-center justify-center gap-3 group hover:border-blue-500 transition-all duration-300 hover:scale-105 bg-slate-800/50 border border-blue-500/20">
+                          {Icon && <Icon className="w-8 h-8 text-gray-400 group-hover:text-blue-400 transition-colors" />}
+                          <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
                             {skill.name}
                           </span>
                         </Card>

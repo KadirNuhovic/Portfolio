@@ -13,10 +13,10 @@ export const Hero = () => {
           <FadeIn direction="up">
             <div className="mb-4">
               <p className="text-lg md:text-xl text-gray-300 font-medium">
-                Hi, I'm <span className="gradient-text font-bold">Kadir Nuhović</span>
+                Hi, I'm <span className="gradient-text font-bold text-glow">Kadir Nuhović</span>
               </p>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 text-shine">
               <span className="gradient-text">Frontend Developer</span> & Software Engineering Student
             </h1>
           </FadeIn>
@@ -24,7 +24,7 @@ export const Hero = () => {
           <FadeIn direction="up" delay={0.2}>
             <div className="max-w-6xl mx-auto space-y-8">
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                I'm a web developer focused on building modern and responsive web applications. I work with technologies such as <span className="font-semibold text-white">React</span>, <span className="font-semibold text-white">Next.js</span>, <span className="font-semibold text-white">JavaScript</span>, <span className="font-semibold text-white">TypeScript</span>, <span className="font-semibold text-white">HTML</span>, <span className="font-semibold text-white">CSS</span>, and <span className="font-semibold text-white">Tailwind CSS</span>, and I have experience working with databases and backend integration.
+                I'm a web developer focused on building modern and responsive web applications. I work with technologies such as <span className="font-semibold text-white text-glow">React</span>, <span className="font-semibold text-white text-glow">Next.js</span>, <span className="font-semibold text-white text-glow">JavaScript</span>, <span className="font-semibold text-white text-glow">TypeScript</span>, <span className="font-semibold text-white text-glow">HTML</span>, <span className="font-semibold text-white text-glow">CSS</span>, and <span className="font-semibold text-white text-glow">Tailwind CSS</span>, and I have experience working with databases and backend integration.
               </p>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
                 I enjoy collaborating in teams, building real-world projects, and constantly improving my development skills. My goal is to create clean, efficient, and user-friendly applications while continuously learning new technologies.
@@ -36,7 +36,7 @@ export const Hero = () => {
             <div className="mt-12">
               {/* Enhanced Tech Stack */}
               <div className="mb-12">
-                <h3 className="text-lg font-semibold text-gray-300 mb-6">Tech Stack</h3>
+                <h3 className="text-lg font-semibold text-gray-300 mb-6 text-glow">Tech Stack</h3>
                 <div className="flex flex-wrap items-center justify-center gap-4">
                   {[
                     { name: 'React', color: 'bg-blue-500/20 text-blue-400 border-blue-500/30' },
@@ -93,7 +93,7 @@ export const Hero = () => {
               
               {/* Enhanced Tech Stack with Progress Bars */}
               <div className="mb-12">
-                <h3 className="text-lg font-semibold text-gray-300 mb-6 text-center">Tech Stack & Proficiency</h3>
+                <h3 className="text-lg font-semibold text-gray-300 mb-6 text-center text-glow">Tech Stack & Proficiency</h3>
                 <div className="max-w-6xl mx-auto space-y-6">
                   {[
                     { name: 'React', level: 90, color: 'bg-blue-500' },
@@ -108,7 +108,7 @@ export const Hero = () => {
                     <div key={tech.name} className="space-y-2">
                       <div className="flex justify-between items-center">
                         <span className="text-sm font-medium text-gray-300">{tech.name}</span>
-                        <span className="text-sm font-semibold text-white">{tech.level}%</span>
+                        <span className="text-sm font-semibold text-white text-glow">{tech.level}%</span>
                       </div>
                       <div className="relative w-full h-4 bg-gray-700 rounded-full overflow-hidden">
                         <div 
@@ -144,7 +144,7 @@ export const Hero = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <Button 
                   size="lg" 
-                  className="px-8 py-4 text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                  className="px-8 py-4 text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 btn-gradient text-white border-0"
                   onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   <span className="flex items-center gap-2">
@@ -157,7 +157,7 @@ export const Hero = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="px-8 py-4 text-lg border-2 hover:scale-105 transition-all duration-300"
+                  className="px-8 py-4 text-lg border-2 border-blue-500/50 text-blue-400 hover:border-blue-400 hover:text-blue-300 hover:scale-105 transition-all duration-300"
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   <span className="flex items-center gap-2">
@@ -174,7 +174,7 @@ export const Hero = () => {
       </Container>
       
       {/* Background decoration */}
-      <div className="absolute top-0 -z-10 h-full w-full bg-slate-900">
+      <div className="absolute top-0 -z-10 h-full w-full fixed-teget">
         <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-blue-500/10 opacity-50 blur-[80px]"></div>
       </div>
     </section>

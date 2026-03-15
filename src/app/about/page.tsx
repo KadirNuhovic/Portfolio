@@ -6,7 +6,7 @@ import { About } from '@/components/sections/About';
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen text-gray-900" style={{ backgroundColor: '#b0afac' }}>
+    <div className="flex flex-col min-h-screen text-white fixed-teget">
       <Navbar />
       <main className="flex-grow pt-24">
         <About />

@@ -14,16 +14,16 @@ export const SectionTitle = ({ title, subtitle, className, align = 'center' }: S
       align === 'center' ? 'text-center' : 'text-left',
       className
     )}>
-      <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 shimmer-text inline-block">
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-shine inline-block">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto">
           {subtitle}
         </p>
       )}
       <div className={cn(
-        'h-1.5 w-20 bg-gold rounded-full',
+        'h-1.5 w-20 bg-blue-500 rounded-full',
         align === 'center' ? 'mx-auto' : ''
       )} />
     </div>

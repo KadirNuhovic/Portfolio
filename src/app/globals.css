@@ -74,3 +74,126 @@ body {
     width: 100%;
   }
 }
+
+.gradient-border {
+  background: linear-gradient(
+    270deg,
+    #3b82f6,
+    #8b5cf6,
+    #06b6d4
+  );
+  background-size: 600% 600%;
+  animation: gradientMove 8s ease infinite;
+  height: 3px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.btn-gradient {
+  background: linear-gradient(
+    45deg,
+    #3b82f6,
+    #8b5cf6
+  );
+  transition: 0.4s;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(
+    45deg,
+    #8b5cf6,
+    #3b82f6
+  );
+  transform: scale(1.05);
+}
+
+.footer-border {
+  border-top: 2px solid transparent;
+  background: linear-gradient(#0f172a,#0f172a) padding-box,
+              linear-gradient(90deg,#3b82f6,#8b5cf6,#06b6d4) border-box;
+}
+
+.header-gradient {
+  background: linear-gradient(
+    270deg,
+    #0f172a,
+    #1e3a8a,
+    #1e40af,
+    #0f172a
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-navy {
+  background: linear-gradient(
+    270deg,
+    #020617,
+    #0f172a,
+    #1e3a8a,
+    #1e40af,
+    #0f172a
+  );
+  background-size: 500% 500%;
+  animation: navyMove 12s ease infinite;
+}
+
+@keyframes navyMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.header-glow {
+  box-shadow: 0 4px 20px rgba(59,130,246,0.3);
+}
+
+.fixed-teget {
+  background: linear-gradient(
+    270deg,
+    #0f172a,
+    #1e293b,
+    #0f172a
+  );
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(255,255,255,0.3),
+               0 0 20px rgba(255,255,255,0.2),
+               0 0 30px rgba(255,255,255,0.1);
+}
+
+.text-shine {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.9) 50%,
+    rgba(255,255,255,1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+}
