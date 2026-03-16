@@ -15,10 +15,40 @@ export const Contact = () => {
     e.preventDefault();
     setStatus('loading');
     
-    // Simulate API call
-    setTimeout(() => {
-      setStatus('success');
-    }, 1500);
+    try {
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      const name = formData.get('name') as string;
+      const email = formData.get('email') as string;
+      const message = formData.get('message') as string;
+
+      // Basic validation
+      if (!name || !email || !message) {
+        setStatus('error');
+        return;
+      }
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+        console.error('Form submission error:', data.error);
+      }
+    } catch (error) {
+      setStatus('error');
+      console.error('Form submission error:', error);
+    }
   };
 
   return (
@@ -42,21 +72,42 @@ export const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-4 text-gray-300">
                   <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
-                    <FaLinkedin size={20} />
-                  </div>
-                  <span>linkedin.com/in/yourusername</span>
-                </div>
-                <div className="flex items-center gap-4 text-gray-300">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
                     <FaGithub size={20} />
                   </div>
-                  <span>github.com/yourusername</span>
+                  <a 
+                    href="https://github.com/KadirNuhovic" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    github.com/KadirNuhovic
+                  </a>
                 </div>
                 <div className="flex items-center gap-4 text-gray-300">
                   <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
-                    <FaTwitter size={20} />
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
                   </div>
-                  <span>twitter.com/yourusername</span>
+                  <a 
+                    href="mailto:kadirnuhovic8@gmail.com" 
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    kadirnuhovic8@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-4 text-gray-300">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <a 
+                    href="tel:+381655001615" 
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    +381 65 500 1615
+                  </a>
                 </div>
               </div>
             </div>
@@ -70,6 +121,7 @@ export const Contact = () => {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     required
                     className="w-full px-4 py-2 rounded-lg border border-blue-500/30 bg-slate-700/50 text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all"
                   />
@@ -79,6 +131,7 @@ export const Contact = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     required
                     className="w-full px-4 py-2 rounded-lg border border-blue-500/30 bg-slate-700/50 text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all"
                   />
@@ -87,6 +140,7 @@ export const Contact = () => {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">Message</label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={4}
                     required
                     className="w-full px-4 py-2 rounded-lg border border-blue-500/30 bg-slate-700/50 text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-none"
@@ -100,7 +154,10 @@ export const Contact = () => {
                   {status === 'loading' ? 'Sending...' : 'Send Message'}
                 </Button>
                 {status === 'success' && (
-                  <p className="text-green-400 text-center">Message sent successfully!</p>
+                  <p className="text-green-400 text-center">✅ Message sent successfully! I'll get back to you soon.</p>
+                )}
+                {status === 'error' && (
+                  <p className="text-red-400 text-center">❌ Failed to send message. Please try again.</p>
                 )}
               </form>
             </Card>
