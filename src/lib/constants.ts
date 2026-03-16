@@ -9,8 +9,9 @@ export const NAV_LINKS = [
 
 export const SOCIAL_LINKS = {
   github: 'https://github.com/KadirNuhovic',
-  linkedin: 'https://linkedin.com/in/yourusername',
+  linkedin: 'https://www.linkedin.com/in/kadir-nuhovic-8975582b1/',
   twitter: 'https://twitter.com/yourusername',
+  instagram: 'https://www.instagram.com/kadir_nvc',
   email: 'your.email@example.com',
 } as const;
 

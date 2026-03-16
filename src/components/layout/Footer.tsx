@@ -128,6 +128,14 @@ export const Footer = () => {
                   <FaLinkedin className="w-5 h-5 text-gray-300 group-hover:text-white" />
                 </a>
                 <a
+                  href={SOCIAL_LINKS.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gradient-to-br from-slate-800/60 to-pink-900/60 border border-pink-500/30 rounded-xl hover:scale-110 hover:border-pink-400 transition-all duration-300 hover:shadow-pink-500/30 group"
+                >
+                  <FaInstagram className="w-5 h-5 text-gray-300 group-hover:text-pink-400" />
+                </a>
+                <a
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -142,14 +150,6 @@ export const Footer = () => {
                   className="p-3 bg-gradient-to-br from-slate-800/60 to-cyan-900/60 border border-cyan-500/30 rounded-xl hover:scale-110 hover:border-cyan-400 transition-all duration-300 hover:shadow-cyan-500/30 group"
                 >
                   <FaTwitter className="w-5 h-5 text-gray-300 group-hover:text-cyan-400" />
-                </a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-gradient-to-br from-slate-800/60 to-pink-900/60 border border-pink-500/30 rounded-xl hover:scale-110 hover:border-pink-400 transition-all duration-300 hover:shadow-pink-500/30 group"
-                >
-                  <FaInstagram className="w-5 h-5 text-gray-300 group-hover:text-pink-400" />
                 </a>
               </div>
             </div>
