@@ -14,10 +14,19 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if environment variables are set
+    console.log('Environment check:', {
+      EMAIL_USER: process.env.EMAIL_USER ? 'SET' : 'NOT SET',
+      EMAIL_PASS: process.env.EMAIL_PASS ? 'SET' : 'NOT SET',
+      NODE_ENV: process.env.NODE_ENV
+    });
+    
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-      console.error('Email environment variables not set');
+      console.error('Email environment variables not set:', {
+        EMAIL_USER: process.env.EMAIL_USER,
+        EMAIL_PASS: process.env.EMAIL_PASS ? '***' : 'MISSING'
+      });
       return NextResponse.json(
-        { error: 'Email service not configured' },
+        { error: 'Email service not configured. Please contact administrator.' },
         { status: 500 }
       );
     }
@@ -29,7 +38,20 @@ export async function POST(request: NextRequest) {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+      debug: process.env.NODE_ENV === 'development',
     });
+
+    // Verify transporter
+    try {
+      await transporter.verify();
+      console.log('Transporter verified successfully');
+    } catch (verifyError) {
+      console.error('Transporter verification failed:', verifyError);
+      return NextResponse.json(
+        { error: 'Email service configuration error. Please contact administrator.' },
+        { status: 500 }
+      );
+    }
 
     // Email to you
     const mailOptions = {
