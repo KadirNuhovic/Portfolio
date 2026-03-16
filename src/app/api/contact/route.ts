@@ -13,12 +13,21 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create transporter (you'll need to configure this with your email service)
+    // Check if environment variables are set
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.error('Email environment variables not set');
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      );
+    }
+
+    // Create transporter
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // or your email service
+      service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER, // Your email
-        pass: process.env.EMAIL_PASS, // Your app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
