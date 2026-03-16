@@ -2,15 +2,5 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "installCommand": "npm install",
-  "framework": "nextjs",
-  "env": {
-    "EMAIL_USER": "kadirnuhovic8@gmail.com",
-    "EMAIL_PASS": "@email_pass"
-  },
-  "build": {
-    "env": {
-      "EMAIL_USER": "kadirnuhovic8@gmail.com",
-      "EMAIL_PASS": "@email_pass"
-    }
-  }
+  "framework": "nextjs"
 }

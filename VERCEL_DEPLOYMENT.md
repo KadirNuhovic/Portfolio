@@ -17,10 +17,15 @@ git push origin main
    - Go to Settings → Environment Variables
 
 2. **Add Environment Variables:**
-   ```
-   EMAIL_USER = kadirnuhovic8@gmail.com
-   EMAIL_PASS = nnrc beuh qpjk ppfl
-   ```
+   - Click "Add New"
+   - Name: `EMAIL_USER`
+   - Value: `kadirnuhovic8@gmail.com`
+   - Click "Save"
+   
+   - Click "Add New" again
+   - Name: `EMAIL_PASS`
+   - Value: `nnrc beuh qpjk ppfl`
+   - Click "Save"
 
 3. **Redeploy the Project**
    - Go to Deployments
