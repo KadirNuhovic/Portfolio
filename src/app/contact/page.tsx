@@ -3,6 +3,7 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Contact } from '@/components/sections/Contact';
+import { Map } from '@/components/sections/Map';
 
 export default function ContactPage() {
   return (
@@ -10,6 +11,7 @@ export default function ContactPage() {
       <Navbar />
       <main className="flex-grow pt-24">
         <Contact />
+        <Map />
       </main>
       <Footer />
     </div>

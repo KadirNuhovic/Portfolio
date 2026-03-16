@@ -19,17 +19,17 @@ export const Hero = () => {
               </p>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 text-shine">
-              <span className="gradient-text">Frontend Developer</span> & Software Engineering Student
+              <span className="gradient-text">Full-Stack Developer</span> & Software Engineer
             </h1>
           </FadeIn>
           
           <FadeIn direction="up" delay={0.2}>
             <div className="max-w-6xl mx-auto space-y-8">
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                I'm a web developer focused on building modern and responsive web applications. I work with technologies such as <span className="font-semibold text-white text-glow">React</span>, <span className="font-semibold text-white text-glow">Next.js</span>, <span className="font-semibold text-white text-glow">JavaScript</span>, <span className="font-semibold text-white text-glow">TypeScript</span>, <span className="font-semibold text-white text-glow">HTML</span>, <span className="font-semibold text-white text-glow">CSS</span>, and <span className="font-semibold text-white text-glow">Tailwind CSS</span>, and I have experience working with databases and backend integration.
+                I'm a <span className="font-semibold text-white text-glow">Full-Stack Developer</span> passionate about building modern and responsive web applications. I specialize in <span className="font-semibold text-white text-glow">React</span>, <span className="font-semibold text-white text-glow">Next.js</span>, <span className="font-semibold text-white text-glow">TypeScript</span>, and <span className="font-semibold text-white text-glow">Node.js</span>, with growing experience in <span className="font-semibold text-white text-glow">database design</span> and <span className="font-semibold text-white text-glow">API development</span>.
               </p>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                I enjoy collaborating in teams, building real-world projects, and constantly improving my development skills. My goal is to create clean, efficient, and user-friendly applications while continuously learning new technologies.
+                I love learning new technologies, collaborating with teams, and building real-world projects. My goal is to create <span className="font-semibold text-white text-glow">clean, efficient applications</span> that deliver great user experiences while continuously improving my development skills.
               </p>
             </div>
           </FadeIn>
@@ -93,52 +93,57 @@ export const Hero = () => {
                 </div>
               </div>
               
-              {/* Enhanced Tech Stack with Progress Bars */}
+              {/* Skill Bars */}
               <div className="mb-12">
-                <h3 className="text-lg font-semibold text-gray-300 mb-6 text-center text-glow">Tech Stack & Proficiency</h3>
-                <div className="max-w-6xl mx-auto space-y-6">
+                <h3 className="text-2xl font-bold text-white mb-8 text-center text-glow">Technical Skills</h3>
+                <div className="max-w-4xl mx-auto space-y-6">
                   {[
-                    { name: 'React', level: 90, color: 'bg-blue-500' },
-                    { name: 'TypeScript', level: 85, color: 'bg-blue-600' },
-                    { name: 'JavaScript', level: 95, color: 'bg-yellow-500' },
-                    { name: 'HTML/CSS', level: 90, color: 'bg-orange-500' },
-                    { name: 'Tailwind CSS', level: 88, color: 'bg-cyan-500' },
-                    { name: 'Next.js', level: 82, color: 'bg-gray-800' },
-                    { name: 'Git', level: 80, color: 'bg-red-500' },
-                    { name: 'Node.js', level: 75, color: 'bg-green-600' }
-                  ].map((tech, index) => (
-                    <div key={tech.name} className="space-y-2">
+                    { name: 'Frontend Development', level: 95, color: 'bg-gradient-to-r from-blue-500 to-cyan-500', icon: '🎨' },
+                    { name: 'Backend Development', level: 92, color: 'bg-gradient-to-r from-green-500 to-emerald-500', icon: '⚙️' },
+                    { name: 'Database Management', level: 88, color: 'bg-gradient-to-r from-purple-500 to-pink-500', icon: '🗄️' },
+                    { name: 'Tools & Git', level: 98, color: 'bg-gradient-to-r from-orange-500 to-red-500', icon: '🔧' },
+                    { name: 'Problem Solving', level: 100, color: 'bg-gradient-to-r from-indigo-500 to-purple-500', icon: '🧠' }
+                  ].map((skill, index) => (
+                    <div key={skill.name} className="space-y-3">
                       <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-300">{tech.name}</span>
-                        <span className="text-sm font-semibold text-white text-glow">{tech.level}%</span>
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl">{skill.icon}</span>
+                          <span className="text-lg font-bold text-white">{skill.name}</span>
+                        </div>
+                        <span className="text-2xl font-bold text-white text-glow">{skill.level}%</span>
                       </div>
-                      <div className="relative w-full h-4 bg-gray-700 rounded-full overflow-hidden">
+                      <div className="relative w-full h-6 bg-gray-700 rounded-full overflow-hidden shadow-inner">
                         <div 
-                          className={`h-full ${tech.color} rounded-full transition-all duration-1000 ease-out relative`}
+                          className={`h-full ${skill.color} rounded-full transition-all duration-1500 ease-out relative shadow-lg`}
                           style={{ 
-                            width: `${tech.level}%`,
-                            animation: `fillProgress 1s ease-out ${index * 0.1}s forwards`
+                            width: `${skill.level}%`,
+                            animation: `fillProgress 1.5s ease-out ${index * 0.2}s forwards`
                           }}
                         >
                           <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
+                          <div className="absolute right-2 top-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full animate-pulse"></div>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
                 
-                {/* Tech Stack Badges */}
-                <div className="mt-8">
-                  <div className="flex flex-wrap items-center justify-center gap-3">
-                    {['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Next.js', 'Git'].map((tech, index) => (
-                      <span 
-                        key={tech}
-                        className="px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium border border-blue-500/30 transition-all duration-300 hover:scale-105"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                {/* Skill Categories */}
+                <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {[
+                    { name: 'React/Next.js', count: '95%', color: 'bg-blue-500/20 text-blue-400 border-blue-500/30' },
+                    { name: 'Node.js/Express', count: '92%', color: 'bg-green-500/20 text-green-400 border-green-500/30' },
+                    { name: 'TypeScript', count: '94%', color: 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30' },
+                    { name: 'Git/GitHub', count: '98%', color: 'bg-orange-500/20 text-orange-400 border-orange-500/30' }
+                  ].map((skill) => (
+                    <div 
+                      key={skill.name}
+                      className={`px-4 py-3 rounded-xl text-center font-bold border transition-all duration-300 hover:scale-105 hover:shadow-lg ${skill.color}`}
+                    >
+                      <div className="text-sm">{skill.name}</div>
+                      <div className="text-xl font-bold">{skill.count}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
               

@@ -109,41 +109,63 @@ export const Contact = () => {
                     +381 65 500 1615
                   </a>
                 </div>
+                <div className="flex items-center gap-4 text-gray-300">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="hover:text-blue-400 transition-colors">Emina Redžepagića 47A</p>
+                    <p className="text-sm text-gray-400">36300 Novi Pazar, Serbia</p>
+                  </div>
+                </div>
               </div>
             </div>
           </FadeIn>
 
           <FadeIn direction="left">
-            <Card className="p-8 bg-slate-800/50 border border-blue-500/20">
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <Card className="p-8 bg-gradient-to-br from-slate-900/90 to-blue-900/90 border border-blue-500/40 shadow-2xl backdrop-blur-sm relative overflow-hidden">
+              {/* Background decoration */}
+              <div className="absolute top-0 -z-10 h-full w-full">
+                <div className="absolute top-0 left-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl"></div>
+                <div className="absolute bottom-0 right-0 w-40 h-40 bg-cyan-500/10 rounded-full blur-2xl"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-indigo-500/5 rounded-full blur-3xl"></div>
+              </div>
+              
+              <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                  <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">Name</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-blue-500/30 bg-slate-700/50 text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-blue-500/50 bg-slate-800/60 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all shadow-lg hover:shadow-blue-500/20"
+                    placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                  <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">Email</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-blue-500/30 bg-slate-700/50 text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-blue-500/50 bg-slate-800/60 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all shadow-lg hover:shadow-blue-500/20"
+                    placeholder="your.email@example.com"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                  <label htmlFor="message" className="block text-sm font-semibold text-white mb-2">Message</label>
                   <textarea
                     id="message"
                     name="message"
                     rows={4}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-blue-500/30 bg-slate-700/50 text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-blue-500/50 bg-slate-800/60 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all resize-none shadow-lg hover:shadow-blue-500/20"
+                    placeholder="Your message..."
                   />
                 </div>
                 <Button 

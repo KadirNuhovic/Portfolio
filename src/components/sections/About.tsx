@@ -26,7 +26,7 @@ export const About = () => {
           <FadeIn direction="left">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-white text-glow">
-                Frontend Developer & Software Engineering Student
+                Full-Stack Developer & Software Engineering Student
               </h3>
               <p className="text-gray-300 leading-relaxed">
                 I'm a web developer focused on building modern and responsive web applications. I work with technologies such as <span className="font-semibold text-white text-glow">React</span>, <span className="font-semibold text-white text-glow">Next.js</span>, <span className="font-semibold text-white text-glow">JavaScript</span>, <span className="font-semibold text-white text-glow">TypeScript</span>, <span className="font-semibold text-white text-glow">HTML</span>, <span className="font-semibold text-white text-glow">CSS</span>, and <span className="font-semibold text-white text-glow">Tailwind CSS</span>, and I have experience working with databases and backend integration.
@@ -43,7 +43,7 @@ export const About = () => {
                 </div>
                 <div className="bg-slate-800/50 rounded-xl p-4 border border-blue-500/20">
                   <h4 className="font-semibold text-white text-glow mb-2">💼 Experience</h4>
-                  <p className="text-gray-300 text-sm">3+ Years Professional Experience</p>
+                  <p className="text-gray-300 text-sm">Full-Stack Developer</p>
                 </div>
                 <div className="bg-slate-800/50 rounded-xl p-4 border border-blue-500/20">
                   <h4 className="font-semibold text-white text-glow mb-2">🌍 Location</h4>
@@ -59,7 +59,11 @@ export const About = () => {
               <div className="pt-6">
                 <h4 className="font-semibold text-white text-glow mb-4">Core Skills</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'JavaScript'].map((skill) => (
+                  {[
+                    'React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'JavaScript',
+                    'HTML5', 'CSS3', 'Node.js', 'Git', 'REST APIs',
+                    'Responsive Design', 'UI/UX', 'MongoDB', 'SQL', 'Figma'
+                  ].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium border border-blue-500/30">
                       {skill}
                     </span>
